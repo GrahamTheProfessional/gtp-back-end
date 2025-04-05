@@ -21,8 +21,8 @@ async def deepseek_v3_chat(message: Message):
     return {"response": response}
 
 
-@router.post("/chat/groq/")
+@router.post("/chat/llama/")
 async def groq_chat(message: Message):
     user_message = message.message
-    response = agent.get_groq_response(user_message)
+    response = agent.get_llama_response(user_message)
     return {"response": response}
